@@ -12,7 +12,7 @@ settings =
 		default = "landscapeRight",
 		supported = { "landscapeRight", },
 	},
-
+	build =	{neverStripDebugInfo = true},
 	--
 	-- Android section
 	--

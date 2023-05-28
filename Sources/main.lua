@@ -42,7 +42,7 @@ gamemc.squareFilledPer = 0;
 local login = {};
 login.bestscore = 0;
 
-local saveFilename = "save3.json";
+local saveFilename = "save4.json";
 function saveGame()
 	local data = json.encode(login);
 	saveFile(saveFilename, data);
@@ -52,6 +52,8 @@ do -- loadGame
 	local data = loadFile(saveFilename);
 	if data then
 		login = json.decode(data);
+		if login.bestscore==nil then login.bestscore=0; end
+		login.bestscore = tonumber(login.bestscore);
 	end
 end
 
